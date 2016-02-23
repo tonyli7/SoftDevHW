@@ -1,4 +1,4 @@
-var b = document.getElementById("Circle");//clear button object
+var b = document.getElementById("circle");//clear button object
 
 var c = document.getElementById("playground");//canvas object
 var ctx = c.getContext("2d");
@@ -21,7 +21,10 @@ function draw_circle(e){
     }else if(radius == 0){
 	growing = true;
     }
+    ctx.clearRect(0,0,538,538);
+    ctx.strokeRect(0,0,538,538);
     ctx.beginPath();
+    ctx.fillStyle="#FF0000"
     ctx.arc(c.width/2,c.height/2, radius, 0, 2*Math.PI);
     ctx.stroke();
     ctx.fill();
