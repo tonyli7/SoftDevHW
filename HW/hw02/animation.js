@@ -1,5 +1,5 @@
 var b = document.getElementById("circle");//circle button object
-var d = document.getElementById("DVD");//dvd button object
+
 var s = document.getElementById("stop");//stop button object
 var c = document.getElementById("playground");//canvas object
 var ctx = c.getContext("2d");
@@ -36,19 +36,7 @@ function draw_circle(e){
     
 }
 
-var logo=new Image();
-logo.src="logo_dvd.jpg";
-var dvdx=c.width/2;
-var dvdy=c.height/2;
 
-function dvd(e){
-    console.log(this);
-    ctx.clearRect(0,0,538,538);
-    ctx.strokeRect(0,0,538,538);
-
-    ctx.drawImage(logo,dvdx,dvdy,100,100);
-    window.requestAnimationFrame(dvd);
-}
 
 function stop(e){
   
@@ -56,5 +44,5 @@ function stop(e){
 }
 
 b.addEventListener("click",draw_circle);
-d.addEventListener("click", dvd);
+
 s.addEventListener("click", stop);
