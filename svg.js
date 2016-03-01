@@ -23,6 +23,13 @@ var clicked = function(e){
     }
 };
 
+var grow = true;
+var dr = 1;
+var circle_animate = function(e){
+    radius = parseInt(c.getAttribute("r"));
+    c.setAttribute("r", radius.toString())
+}
+
 pic.addEventListener("click",clicked);
 
 
