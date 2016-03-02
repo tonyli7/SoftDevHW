@@ -1,6 +1,7 @@
 var pic = document.getElementById("vimage");
 var circle = document.getElementById("circle");
 var stop = document.getElementById("stop");
+var dvd = document.getElementById("dvd");
 
 console.log(pic);
 var change = function(e) {
@@ -61,8 +62,32 @@ var stop_circle = function(e){
 }
 //======================================================
 
+//====================DVD Animate=======================
+var dvd_animate = function(e){
+    var i = document.createElementNS(
+	"http://www.w3.org/2000/svg", "image");
+
+    i.setAttribute("x",250);
+    i.setAttribute("y",250);
+    i.setAttribute("height","100");
+    i.setAttribute("width","100");
+    i.setAttribute("xlink:href","logo_dvd.jpg");
+    i.setAttribute("id","dvd_logo");
+
+    pic.appendChild(i);
+    console.log(i);
+    
+}
+
+var go_dvd = function(e){
+    intervalID=window.setInterval(dvd_animate,1);
+}
+
+//======================================================
+
 circle.addEventListener("click", go_circle);
 stop.addEventListener("click", stop_circle);
+dvd.addEventListener("click", go_dvd);
 pic.addEventListener("click",clicked);
 
 
