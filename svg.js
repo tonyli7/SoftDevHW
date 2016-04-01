@@ -71,7 +71,7 @@ var dvd_animate = function(e){
     i.setAttribute("y",250);
     i.setAttribute("height","100");
     i.setAttribute("width","100");
-    i.setAttribute("xlink:href","logo_dvd.jpg");
+    i.setAttribute("http://www.w3.org/1999/xlink","href","logo_dvd.jpg");
     i.setAttribute("id","dvd_logo");
 
     pic.appendChild(i);
