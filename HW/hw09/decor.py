@@ -4,18 +4,19 @@ def f_time(fxn):
     start = time.time()
     t=0
     def func(arg):
-        return str(fxn(arg))+": "+str(time.time()-start)
+        
+        return fxn.__name__+"("+str(arg)+") : "+str(fxn(arg))+" \ntime: "+str(time.time()-start)
     
-    return fxn
+    return func
 
 def func_info(fxn):
 
     def name(arg):
         return fxn.__name__
-    return name
+    return fxn
 
+@f_time 
 @func_info
-@f_time  
 def test(x):
     return x
 
