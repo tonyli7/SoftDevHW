@@ -44,11 +44,11 @@ def ratePass(pwd):
         return rating
             
     return """
-must have:
-lower-case\n
-upper-case\n
-at least one number\n
-"""
+           must have:
+           lower-case\n
+           upper-case\n
+           at least one number\n
+           """
         
 #range from 1 to 50
 print ratePass(p)

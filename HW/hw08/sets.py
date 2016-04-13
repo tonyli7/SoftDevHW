@@ -22,6 +22,16 @@ def cart_product(A,B):
             for y in B
         ]
 
+def qsort(L):
+    if len(L) <= 1:
+        return L
+    pivot = random.choice(L)
+    lh = [x for x in L if x < pivot]
+    uh = [x for x in L if x > pivot]
+
+    return qsort(lh) + ([pivot] * L.count(pivot)) + qsort[uh]
+
+
 print union([1,2,3],[2,3,4])
 print intersection([1,2,3],[2,3,4])
 print set_dif([1,2,3],[2,3,4])
